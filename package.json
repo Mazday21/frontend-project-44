@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "type": "module",
   "description": "[![Actions Status](https://github.com/Mazday21/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mazday21/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
