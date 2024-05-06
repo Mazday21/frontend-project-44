@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-export function brainGames() {
+
+import readAnswer from '../src/cli.js';
+
+function brainGames() {
   console.log('Welcome to the Brain Games!');
+  readAnswer();
 }
 brainGames();
 export default brainGames;
