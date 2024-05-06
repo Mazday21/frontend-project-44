@@ -6,5 +6,7 @@ function brainGames() {
   console.log('Welcome to the Brain Games!');
   readAnswer();
 }
+
 brainGames();
+
 export default brainGames;
