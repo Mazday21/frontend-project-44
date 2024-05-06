@@ -1,3 +1,3 @@
-import brainNames from './bin/brain-games.js';
+import brainGames from './bin/brain-games.js';
 
-brainNames();
+brainGames();
