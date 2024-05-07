@@ -11,7 +11,6 @@ export default function generalLogic(gameData, description) {
     console.log(`Question: ${question}`);
     let answer = readlineSync.question('Your answer: ');
 
-    // Преобразуем числовой ответ в строку для универсального сравнения
     if (!Number.isNan(answer)) {
       answer = String(answer);
     }
