@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import readAnswer from '../src/cli.js';
 
 function brainGames() {

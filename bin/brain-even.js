@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 import readlineSync from 'readline-sync';
 import readUsername from '../src/cli.js';
 
