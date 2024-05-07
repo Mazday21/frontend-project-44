@@ -16,7 +16,22 @@ export default function calcGame() {
     const num2 = getRandomNumber(minRandomNumber, maxRandomNumber);
     const operation = calcOperations[getRandomNumber(0, calcOperations.length - 1)];
     const question = `${num1} ${operation} ${num2}`;
-    const correctAnswer = eval(question).toString();
+    let correctAnswer;
+
+    switch (operation) {
+      case '+':
+        correctAnswer = num1 + num2;
+        break;
+      case '-':
+        correctAnswer = num1 - num2;
+        break;
+      case '*':
+        correctAnswer = num1 * num2;
+        break;
+      default:
+        throw new Error(`Unknown operation: ${operation}`);
+    }
+
     gameData.push([question, correctAnswer.toString()]);
   }
   generalLogic(gameData, description);
