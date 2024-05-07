@@ -1,27 +1,29 @@
 import readlineSync from 'readline-sync';
 import brainGames from './bin/brain-games.js';
 
-export default function generalLogic(questions, correctAnswers, description) {
+export default function generalLogic(gameData, description) {
   const tryNumbers = 3;
   const userName = brainGames();
   console.log(description);
-  let isCalc;
-  if (typeof correctAnswers[0] === 'number') {
-    isCalc = true;
-  } else {
-    isCalc = false;
-  }
+
   for (let i = 0; i < tryNumbers; i += 1) {
-    console.log(`Question: ${questions[i]}`);
+    const [question, correctAnswer] = gameData[i];
+    console.log(`Question: ${question}`);
     let answer = readlineSync.question('Your answer: ');
-    if (isCalc) answer = Number(answer);
-    if (answer === correctAnswers[i]) {
+
+    // Преобразуем числовой ответ в строку для универсального сравнения
+    if (!Number.isNan(answer)) {
+      answer = String(answer);
+    }
+
+    if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswers[i]}`);
-      if (isCalc) console.log(`Let's try again, ${userName}!`);
+      console.log(`${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
+
   console.log(`Congratulations, ${userName}!`);
 }

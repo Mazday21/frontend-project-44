@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-eval */
 import getRandomNumber from '../../src/rand.js';
 import generalLogic from '../../index.js';
 
@@ -7,32 +8,19 @@ export default function calcGame() {
   const maxRandomNumber = 100;
   const minRandomNumber = 1;
   const description = 'What is the result of the expression?';
-  const questions = [];
-  const correctAnswers = [];
   const calcOperations = ['+', '-', '*'];
+  const gameData = [];
+
   for (let i = 0; i < tryNumbers; i += 1) {
-    const firstRandomNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
-    const secondRandomNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
-    const randomOperation = calcOperations[getRandomNumber(0, calcOperations.length - 1)];
-    let correctAnswer;
-    switch (randomOperation) {
-      case '+':
-        correctAnswer = firstRandomNumber + secondRandomNumber;
-        break;
-      case '-':
-        correctAnswer = firstRandomNumber - secondRandomNumber;
-        break;
-      case '*':
-        correctAnswer = firstRandomNumber * secondRandomNumber;
-        break;
-      default:
-        correctAnswer = undefined;
-    }
-    const expression = `${firstRandomNumber} ${randomOperation} ${secondRandomNumber}`;
-    questions.push = expression;
-    correctAnswers.push = correctAnswer;
+    const num1 = getRandomNumber(minRandomNumber, maxRandomNumber);
+    const num2 = getRandomNumber(minRandomNumber, maxRandomNumber);
+    const operation = calcOperations[getRandomNumber(0, calcOperations.length - 1)];
+    const question = `${num1} ${operation} ${num2}`;
+    const correctAnswer = eval(question).toString();
+    gameData.push([question, correctAnswer]);
   }
-  generalLogic(questions, correctAnswers, description);
+
+  generalLogic(gameData, description);
 }
 
 calcGame();
