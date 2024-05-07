@@ -34,7 +34,7 @@ export default function calcGame() {
     }
     const expression = `${firstRandomNumber} ${randomOperation} ${secondRandomNumber}`;
     console.log(`Question: ${expression}`);
-    const answer = readlineSync.question('Your answer: ');
+    const answer = Number(readlineSync.question('Your answer: '));
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
