@@ -17,9 +17,8 @@ export default function calcGame() {
     const operation = calcOperations[getRandomNumber(0, calcOperations.length - 1)];
     const question = `${num1} ${operation} ${num2}`;
     const correctAnswer = eval(question).toString();
-    gameData.push([question, correctAnswer]);
+    gameData.push([question, correctAnswer.toString()]);
   }
-
   generalLogic(gameData, description);
 }
 

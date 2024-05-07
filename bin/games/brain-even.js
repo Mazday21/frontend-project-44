@@ -11,9 +11,9 @@ export default function evenGame() {
   const gameData = [];
 
   for (let i = 0; i < tryNumbers; i += 1) {
-    const randomNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
-    const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
-    gameData.push([randomNumber, correctAnswer]);
+    const question = getRandomNumber(minRandomNumber, maxRandomNumber);
+    const correctAnswer = isEven(question) ? 'yes' : 'no';
+    gameData.push([question, correctAnswer]);
   }
   generalLogic(gameData, description);
 }

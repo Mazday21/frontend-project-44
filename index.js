@@ -9,12 +9,7 @@ export default function generalLogic(gameData, description) {
   for (let i = 0; i < tryNumbers; i += 1) {
     const [question, correctAnswer] = gameData[i];
     console.log(`Question: ${question}`);
-    let answer = readlineSync.question('Your answer: ');
-
-    if (!Number.isNan(answer)) {
-      answer = String(answer);
-    }
-
+    const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
       console.log('Correct!');
     } else {
