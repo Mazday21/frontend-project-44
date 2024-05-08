@@ -7,9 +7,9 @@ const tryNumbers = 3;
 const maxRandomNumber = 100;
 const minRandomNumber = 1;
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-const gameData = [];
 
 export default function evenGame() {
+  const gameData = [];
   for (let i = 0; i < tryNumbers; i += 1) {
     const question = getRandomNumber(minRandomNumber, maxRandomNumber);
     const correctAnswer = isEven(question) ? 'yes' : 'no';

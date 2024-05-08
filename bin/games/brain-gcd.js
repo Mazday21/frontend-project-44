@@ -6,9 +6,9 @@ const tryNumbers = 3;
 const maxRandomNumber = 100;
 const minRandomNumber = 1;
 const description = 'Find the greatest common divisor of given numbers.';
-const gameData = [];
 
 export default function gcdGame() {
+  const gameData = [];
   for (let i = 0; i < tryNumbers; i += 1) {
     let number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
     let number2;
