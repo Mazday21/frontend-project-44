@@ -6,6 +6,4 @@ function brainGames() {
   return readAnswer();
 }
 
-brainGames();
-
 export default brainGames;

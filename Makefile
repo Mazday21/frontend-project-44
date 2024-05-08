@@ -10,6 +10,9 @@ brain-even:
 brain-calc:
 	node bin/ganmes/brain-calc.js
 
+brain-gcd:
+	node bin/ganmes/brain-gcd.js
+
 publish:
 	npm publish --dry-run
 

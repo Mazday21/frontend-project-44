@@ -1,8 +1,9 @@
 import readlineSync from 'readline-sync';
 import brainGames from './bin/brain-games.js';
 
+const tryNumbers = 3;
+
 export default function generalLogic(gameData, description) {
-  const tryNumbers = 3;
   const userName = brainGames();
   console.log(description);
 
