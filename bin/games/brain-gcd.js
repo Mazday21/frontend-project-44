@@ -9,10 +9,7 @@ export default function gcdGame() {
   const gameData = [];
   for (let i = 0; i < tryNumbers; i += 1) {
     let number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
-    let number2;
-    do {
-      number2 = getRandomNumber(minRandomNumber, maxRandomNumber);
-    } while (number1 === number2);
+    let number2 = getRandomNumber(minRandomNumber, maxRandomNumber);
     const question = `${number1} ${number2}`;
     while (number1 !== 0 && number2 !== 0) {
       if (number1 > number2) {
