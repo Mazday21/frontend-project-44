@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 import getRandomNumber from '../../src/rand.js';
 import generalLogic from '../../index.js';
+import { tryNumbers, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
 
-const tryNumbers = 3;
-const maxRandomNumber = 15;
-const minRandomNumber = 1;
 const description = 'What number is missing in the progression?';
 const blank = '..';
 const amountNums = 10;
