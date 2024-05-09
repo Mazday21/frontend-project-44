@@ -1,4 +1,7 @@
 # Brain Games
+## five simple games with numbers in the console
+
+## 'make publish' and 'npm link' to install package
 
 [![Actions Status](https://github.com/Mazday21/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mazday21/frontend-project-44/actions)
 
