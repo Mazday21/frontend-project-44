@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import getRandomNumber from '../../src/rand.js';
-import generalLogic from '../../index.js';
-import { tryNumbers, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
+import generalLogic from '../../src/index.js';
+import { roundsCount, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 export default function primeGame() {
   const gameData = [];
-  for (let i = 0; i < tryNumbers; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
     const question = randomNumber;
     let correctAnswer = 'yes';

@@ -2,8 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/Mazday21/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Mazday21/frontend-project-44/actions)",
-  "main": "index.js",
+  "description": "five simple math games",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/games/brain-even.js",
@@ -12,10 +11,6 @@
     "brain-progression": "bin/games/brain-progression.js",
     "brain-prime": "bin/games/brain-prime.js"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.57.0",

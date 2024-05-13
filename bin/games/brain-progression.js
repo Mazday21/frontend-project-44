@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import getRandomNumber from '../../src/rand.js';
-import generalLogic from '../../index.js';
-import { tryNumbers, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
+import generalLogic from '../../src/index.js';
+import { roundsCount, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
 
 const description = 'What number is missing in the progression?';
 const blank = '..';
@@ -10,7 +10,7 @@ let question = [];
 
 export default function progressiveGame() {
   const gameData = [];
-  for (let i = 0; i < tryNumbers; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     question = [];
     const startNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
     const differenceNumber = getRandomNumber(minRandomNumber, maxRandomNumber);

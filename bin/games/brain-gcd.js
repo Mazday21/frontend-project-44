@@ -1,13 +1,13 @@
 #!/usr/bin/env node
-import generalLogic from '../../index.js';
+import generalLogic from '../../src/index.js';
 import getRandomNumber from '../../src/rand.js';
-import { tryNumbers, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
+import { roundsCount, maxRandomNumber, minRandomNumber } from '../../src/GameConfig.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 export default function gcdGame() {
   const gameData = [];
-  for (let i = 0; i < tryNumbers; i += 1) {
+  for (let i = 0; i < roundsCount; i += 1) {
     let number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
     let number2;
     do {
