@@ -5,23 +5,25 @@ import { roundsCount, maxRandomNumber, minRandomNumber } from '../../src/GameCon
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < number; i += 1) {
+    if (number % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
 export default function primeGame() {
   const gameData = [];
   for (let i = 0; i < roundsCount; i += 1) {
     const randomNumber = getRandomNumber(minRandomNumber, maxRandomNumber);
     const question = randomNumber;
-    let correctAnswer = 'yes';
-
-    if (randomNumber === 1) {
-      correctAnswer = 'no'; // 1 не считается простым числом
-    } else {
-      for (let j = 2; j < randomNumber; j += 1) {
-        if (randomNumber % j === 0) {
-          correctAnswer = 'no';
-          break;
-        }
-      }
-    }
+    const correctAnswer = isPrime(randomNumber) ? 'yes' : 'no';
     gameData.push([question, correctAnswer]);
   }
   generalLogic(gameData, description);
