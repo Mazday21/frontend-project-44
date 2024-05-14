@@ -1,5 +1,7 @@
 #!/usr/bin/env node
+import makeWelcome from '../src/cli';
+
 export default function brainGames() {
-  console.log('Welcome to the Brain Games!');
+  makeWelcome();
 }
 brainGames();
