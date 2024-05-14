@@ -12,10 +12,14 @@ export default function primeGame() {
     const question = randomNumber;
     let correctAnswer = 'yes';
 
-    for (let j = 2; j < randomNumber; j += 1) {
-      if (randomNumber % j === 0) {
-        correctAnswer = 'no';
-        break;
+    if (randomNumber === 1) {
+      correctAnswer = 'no'; // 1 не считается простым числом
+    } else {
+      for (let j = 2; j < randomNumber; j += 1) {
+        if (randomNumber % j === 0) {
+          correctAnswer = 'no';
+          break;
+        }
       }
     }
     gameData.push([question, correctAnswer]);
