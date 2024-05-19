@@ -33,7 +33,7 @@ const generateRound = () => {
 export default () => {
   const rounds = [];
 
-  for (let i = 0; i < roundsCount; i += 1) { rounds.push(generateRound); }
+  for (let i = 0; i < roundsCount; i += 1) { rounds.push(generateRound()); }
 
   generalLogic(description, rounds);
 };
