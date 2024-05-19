@@ -1,5 +1,4 @@
 import getRandomNumber from '../rand.js';
-import roundsCount from '../roundsCount.js';
 import gameEngine from '../gameEngine.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -23,4 +22,4 @@ const generateRound = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(description, generateRound, roundsCount);
+export default () => gameEngine(description, generateRound);
