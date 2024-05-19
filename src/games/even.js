@@ -1,7 +1,7 @@
-import generalLogic from '../index.js';
 import getRandomNumber from '../rand.js';
 import isEven from '../isEven.js';
 import roundsCount from '../roundsCount.js';
+import gameEngine from '../gameEngine.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,10 +11,4 @@ const generateRound = () => {
   return [question, answer];
 };
 
-export default () => {
-  const rounds = [];
-
-  for (let i = 0; i < roundsCount; i += 1) { rounds.push(generateRound()); }
-
-  generalLogic(description, rounds);
-};
+export default () => gameEngine(description, generateRound, roundsCount);
