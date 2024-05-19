@@ -1,7 +1,6 @@
 import readlineSync from 'readline-sync';
 import makeWelcome from './cli.js';
-
-const roundsCount = 3;
+import roundsCount from './roundsCount.js';
 
 export default function generalLogic(gameData, description) {
   const userName = makeWelcome();
