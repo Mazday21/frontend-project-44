@@ -22,4 +22,4 @@ const generateRound = () => {
   return [question, answer];
 };
 
-export default () => gameEngine(description, generateRound());
+export default () => gameEngine(description, generateRound);
